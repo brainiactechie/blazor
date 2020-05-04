@@ -1,0 +1,13 @@
+@page "/Emp"
+@inherits EmployeeBase
+<ul class="list-group">
+    @foreach (var emp in Employees)
+    {   
+        var link = $"/employee/{emp.Id}";
+            <li class="list-group-item "> 
+                <NavLink href="@link">
+                    @emp.Name 
+                </NavLink>
+            </li>
+    }
+</ul>

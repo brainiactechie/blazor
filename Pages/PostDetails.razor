@@ -1,0 +1,27 @@
+@page "/post/{PostID}"
+@inherits PostDetailsBase
+
+@if (Post !=null)
+{
+    
+<table class="table table-striped">
+    <tbody>
+        <tr>
+            <td>Id :   </td>
+            <td>@Post.Id</td>
+        </tr>
+        <tr>
+            <td>User Id :   </td>
+            <td>@Post.UserId</td>
+        </tr>
+        <tr>
+            <td>Title :   </td>
+            <td>@Post.Title</td>
+        </tr>
+        <tr>
+            <td>Body :   </td>
+            <td>@Post.Body</td>
+        </tr>
+    </tbody>
+</table>
+}

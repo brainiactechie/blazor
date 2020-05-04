@@ -1,0 +1,18 @@
+@page "/books"
+@inherits BookListBase
+<div class="card-columns">
+    @foreach (var book in Books)
+    {
+        var link =$"/books/{FriendlyUrl(book.Title)}/{book.BookId}";
+        var Avaialbe = book.Avaialbe ? "Yes. Buy Now ?" : "Not In The Market";
+        <NavLink class="container" href="@link" >
+              <div class="card">
+        <img class="card-img-top" src="@book.CoverImg" alt="">
+        <div class="card-body">
+            <h4 class="card-title">@book.Title</h4>
+            <p class="card-text">@Avaialbe</p>
+        </div>
+        </div>
+        </NavLink>
+    }
+</div>

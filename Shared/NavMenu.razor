@@ -1,0 +1,65 @@
+﻿@* <div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">SecondServer</a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </li>        
+    </ul>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+} *@
+
+
+<nav class="navbar navbar-expand-md navbar-light bg-light container-fluid">
+    <a class="navbar-brand" href="/">Blazor Server</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                    <NavLink href="/" class="nav-link">
+                        Home
+                    </NavLink>
+            </li>
+            <li class="nav-item active">
+                    <NavLink href="emp" class="nav-link">
+                        Employees
+                    </NavLink>
+            </li>
+            <li class="nav-item ">
+                    <NavLink href="posts" class="nav-link">
+                        Posts
+                    </NavLink>
+            </li>
+            <li class="nav-item ">
+                    <NavLink href="books" class="nav-link">
+                        Books
+                    </NavLink>
+            </li>
+          
+        </ul>
+    </div>
+</nav>
+
+
+@code {
+    
+}

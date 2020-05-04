@@ -1,0 +1,28 @@
+@page "/employee/{IdParam}"
+@inherits EmployeeDetailsBase
+
+
+<table class="table">
+    <tbody>
+        <tr>
+            <td>ID  </td>
+            <td>@Emp.Id </td>
+        </tr>
+         <tr>
+            <td>Name  </td>
+            <td>@Emp.Name </td>
+        </tr>
+        <tr>
+            <td>Address  </td>
+            <td>@Emp.Address </td>
+        </tr>
+        <tr>
+            <td>Name  </td>
+            <td>@Emp.Age </td>
+        </tr>
+       
+    </tbody>
+</table>
+<NavLink href="/emp" class="btn btn-success">
+    Go Back
+</NavLink>

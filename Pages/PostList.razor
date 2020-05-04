@@ -1,0 +1,19 @@
+@page "/posts"
+@inherits PostListBase
+
+
+
+<ul class="list-group">
+
+@if(Posts != null){
+        @foreach (var post in  Posts)
+        {
+            var postLink = "/post/"+post.Id;
+            <li class="list-group-item">
+                <NavLink href="@postLink"  class="" >
+                        @post.Title
+                </NavLink>
+             </li>
+        }
+}
+</ul>
